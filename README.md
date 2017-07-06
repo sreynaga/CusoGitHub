@@ -12,7 +12,7 @@
 
 - [MAMP](https://www.mamp.info/en/) (Mac OS, Apache Server, MySQL, PHP)
 - PhpMyAdmin(included on MAMP) or Workbench
-- [Sublime Text](https://www.sublimetext.com/), [Atom](https://atom.io/), [PHP Storm](https://www.jetbrains.com/phpstorm/), etc
+- [Sublime Text](https://www.sublimetext.com/) or [Atom](https://atom.io/) or [PHP Storm](https://www.jetbrains.com/phpstorm/) among other ones (it's your choice :)).
 - To use git you can use the Terminal or [GitHub Desktop](https://desktop.github.com/) or The IDE
 
 ## Steps to set up the App
