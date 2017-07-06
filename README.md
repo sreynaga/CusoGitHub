@@ -10,10 +10,10 @@
 
 ## Recommended Tools
 
-- MAMP (Mac OS, Apache Server, MySQL, PHP)
+- [MAMP](https://www.mamp.info/en/) (Mac OS, Apache Server, MySQL, PHP)
 - PhpMyAdmin(included on MAMP) or Workbench
-- Sublime Text, Atom, PHP Storm, etc
-- To use git you need the Terminal / GitHub Desktop / The IDE
+- [Sublime Text](https://www.sublimetext.com/), [Atom](https://atom.io/), [PHP Storm](https://www.jetbrains.com/phpstorm/), etc
+- To use git you can use the Terminal or [GitHub Desktop](https://desktop.github.com/) or The IDE
 
 ## Steps to set up the App
 
