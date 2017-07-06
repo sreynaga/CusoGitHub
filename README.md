@@ -34,6 +34,7 @@
 - Change the connection parameters to the database. You can change that on the `wp-config.php` file
 
     Original:
+    
     ```php
     # Database Configuration
     define( 'DB_NAME', 'wp_omiweb' );
@@ -52,30 +53,30 @@
     ```
 - Change the option `DOMAIN_CURRENT_SITE` on the `wp-config.php` file without `http` or `/` at the end of the url
 
-    Original:
+    **Original:**
     ```php
     define( 'DOMAIN_CURRENT_SITE', 'www.onlinemarketinginstitute.org' );
     ```
 
-    Should be:
+    **Should be:**
     ```php
     define( 'DOMAIN_CURRENT_SITE', 'YOUR_DOMAIN_HERE_WITHOUT_HTTP_OR_SLASH_AT_THE_END' );
     ```
 
-    _Example:_
+    **Example:**
     ```php
     define( 'DOMAIN_CURRENT_SITE', 'omiweb.dev' );
     ```
 - Change the option `WPE_FORCE_SSL_LOGIN` and `FORCE_SSL_LOGIN` on the `wp-config.php` file
 
-    Original:
+    **Original**
     ```php
     define( 'WPE_FORCE_SSL_LOGIN', true );
 
     define( 'FORCE_SSL_LOGIN', true );
     ```
 
-    Should be:
+    **Should be:**
     ```php
     define( 'WPE_FORCE_SSL_LOGIN', false );
 
@@ -94,7 +95,7 @@
     UPDATE wp_blogs SET domain = "YOUR_DOMAIN_HERE_WITHOUT_HTTP_OR_SLASH_AT_THE_END";
     ```
 
-    _Example:_
+    **Example:**
     ```sql
     UPDATE wp_blogs SET domain = "omiweb.dev";
     ```
@@ -105,7 +106,7 @@
     UPDATE wp_site SET domain = "YOUR_DOMAIN_HERE_WITHOUT_HTTP_OR_SLASH_AT_THE_END";
     ```
 
-    _Example:_
+    **Example:**
     ```sql
     UPDATE wp_site SET domain = "omiweb.dev";
     ```
@@ -116,7 +117,7 @@
     UPDATE wp_sitemeta SET meta_value = "YOUR_DOMAIN_HERE_WITH_HTTP_AND_SLASH_AT_THE_END" WHERE meta_id = 14;
     ```
 
-    _Example:_
+    **Example:**
     ```sql
     UPDATE wp_sitemeta SET meta_value = "http://omiweb.dev/" WHERE meta_id = 14;
     ```
@@ -128,7 +129,7 @@
     UPDATE wp_options SET option_value = "YOUR_DOMAIN_HERE_WITH_HTTP_AND_WITHOUT_SLASH_AT_THE_END" WHERE option_id = 2;
     ```
 
-    _Example:_
+    **Example:**
     ```sql
     UPDATE wp_options SET option_value = "http://omiweb.dev" WHERE option_id = 1;
     UPDATE wp_options SET option_value = "http://omiweb.dev" WHERE option_id = 2;
