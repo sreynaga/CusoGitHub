@@ -18,7 +18,8 @@
 ## Steps to set up the App
 
 - Clone the repository from [GitHub](https://github.com/OMIproduct/omiweb)
-    With the terminal:
+    
+    > With the terminal:
 
     ```sh
     git clone git@github.com:OMIproduct/omiweb.git
@@ -33,7 +34,7 @@
 - Import the database into `MAMP MySQL` server. You can find a copy of the database on the folder `wp-content` as `mysql.sql`
 - Change the connection parameters to the database. You can change that on the `wp-config.php` file
 
-    **Original:**
+    > Original:
     ```php
     # Database Configuration
     define( 'DB_NAME', 'wp_omiweb' );
@@ -42,7 +43,7 @@
     define( 'DB_HOST', '127.0.0.1' );
     ```
 
-    **Should be:**
+    > Should be:
     ```php
     # Database Configuration
     define( 'DB_NAME', 'YOUR_DATABASE_NAME' );
@@ -52,30 +53,30 @@
     ```
 - Change the option `DOMAIN_CURRENT_SITE` on the `wp-config.php` file without `http` or `/` at the end of the url
 
-    **Original:**
+    > Original:
     ```php
     define( 'DOMAIN_CURRENT_SITE', 'www.onlinemarketinginstitute.org' );
     ```
 
-    **Should be:**
+    > Should be:
     ```php
     define( 'DOMAIN_CURRENT_SITE', 'YOUR_DOMAIN_HERE_WITHOUT_HTTP_OR_SLASH_AT_THE_END' );
     ```
 
-    **Example:**
+    > Example:
     ```php
     define( 'DOMAIN_CURRENT_SITE', 'omiweb.dev' );
     ```
 - Change the option `WPE_FORCE_SSL_LOGIN` and `FORCE_SSL_LOGIN` on the `wp-config.php` file
 
-    **Original**
+    > Original
     ```php
     define( 'WPE_FORCE_SSL_LOGIN', true );
 
     define( 'FORCE_SSL_LOGIN', true );
     ```
 
-    **Should be:**
+    > Should be:
     ```php
     define( 'WPE_FORCE_SSL_LOGIN', false );
 
