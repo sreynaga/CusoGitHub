@@ -27,7 +27,7 @@
     ```
 - Download a full backup of production site from [wpengine](https://my.wpengine.com/installs/omiweb/backup_points#production)
 - Merge the backup folder into the repository folder from GitHub
-- Remove the folder `wp-content/mu-plugins/`
+- Remove the folder `wp-content/mu-plugins`
 - Remove the file `wp-content/advanced-cache.php`
 - Remove the folder `wp-content/fix-my-feed-rss-repair`
 - Create a virtual host on MAMP and select the GitHub repository as root folder. Example [how to create a virtual host on MAMP](http://foundationphp.com/tutorials/vhosts_mamp.php)
