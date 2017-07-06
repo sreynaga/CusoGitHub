@@ -50,7 +50,7 @@
     define( 'DB_PASSWORD', 'YOUR_DATABASE_PASSWORD' );
     define( 'DB_HOST', 'localhost' );
     ```
-- Change the option `DOMAIN_CURRENT_SITE` on the `wp-config.php` file without <span style='color:red'>`http`</span> or `/` at the end of the url
+- Change the option `DOMAIN_CURRENT_SITE` on the `wp-config.php` file without `http` or `/` at the end of the url
 
     **Original:**
     ```php
@@ -86,47 +86,47 @@
 
 We need modify some tables on the database. Run the following sql sentences on your database.
 
-- Update the `domain` for MAMP's hostname **WITHOUT** `http` **OR** `/` on `wp_blogs` table:
+1. Update the `domain` for MAMP's hostname **WITHOUT** `http` **OR** `/` on `wp_blogs` table:
 
     ```sql
     UPDATE wp_blogs SET domain = "YOUR_DOMAIN_HERE_WITHOUT_HTTP_OR_SLASH_AT_THE_END";
     ```
 
-    **Example:**
+    > Example
     ```sql
     UPDATE wp_blogs SET domain = "omiweb.dev";
     ```
 
-- Update the `domain` for MAMP's hostname **WITHOUT** `http` **OR** `/` at the end on `wp_site` table:
+2. Update the `domain` for MAMP's hostname **WITHOUT** `http` **OR** `/` at the end on `wp_site` table:
 
     ```sql
     UPDATE wp_site SET domain = "YOUR_DOMAIN_HERE_WITHOUT_HTTP_OR_SLASH_AT_THE_END";
     ```
 
-    **Example:**
+    > Example:
     ```sql
     UPDATE wp_site SET domain = "omiweb.dev";
     ```
 
-- Update the `meta_value` for MAMP's hostname **WITH** `http` **AND** `/` at the end on `wp_sitemeta` table:
+3. Update the `meta_value` for MAMP's hostname **WITH** `http` **AND** `/` at the end on `wp_sitemeta` table:
 
     ```sql
     UPDATE wp_sitemeta SET meta_value = "YOUR_DOMAIN_HERE_WITH_HTTP_AND_SLASH_AT_THE_END" WHERE meta_id = 14;
     ```
 
-    **Example:**
+    > Example:
     ```sql
     UPDATE wp_sitemeta SET meta_value = "http://omiweb.dev/" WHERE meta_id = 14;
     ```
 
-- Update the `option_value` for MAMP's hostname **WITH** http and **WITHOUT** `/` at the end on `wp_options` table:
+4. Update the `option_value` for MAMP's hostname **WITH** http and **WITHOUT** `/` at the end on `wp_options` table:
 
     ```sql
     UPDATE wp_options SET option_value = "YOUR_DOMAIN_HERE_WITH_HTTP_AND_WITHOUT_SLASH_AT_THE_END" WHERE option_id = 1;
     UPDATE wp_options SET option_value = "YOUR_DOMAIN_HERE_WITH_HTTP_AND_WITHOUT_SLASH_AT_THE_END" WHERE option_id = 2;
     ```
 
-    **Example:**
+    > Example:
     ```sql
     UPDATE wp_options SET option_value = "http://omiweb.dev" WHERE option_id = 1;
     UPDATE wp_options SET option_value = "http://omiweb.dev" WHERE option_id = 2;
