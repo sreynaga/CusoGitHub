@@ -1,4 +1,4 @@
-# How to set the development environment
+# How To Set The Development Environment
 
 ## Pre-Requirements
 
@@ -33,8 +33,7 @@
 - Import the database into `MAMP MySQL` server. You can find a copy of the database on the folder `wp-content` as `mysql.sql`
 - Change the connection parameters to the database. You can change that on the `wp-config.php` file
 
-    Original:
-    
+    **Original:**
     ```php
     # Database Configuration
     define( 'DB_NAME', 'wp_omiweb' );
@@ -43,7 +42,7 @@
     define( 'DB_HOST', '127.0.0.1' );
     ```
 
-    Should be:
+    **Should be:**
     ```php
     # Database Configuration
     define( 'DB_NAME', 'YOUR_DATABASE_NAME' );
@@ -85,11 +84,9 @@
 
 ## Steps to set up the database
 
-> We need modify some tables on the database.
+We need modify some tables on the database. Run the following sql sentences on your database.
 
-- Run the following sql sentences on your database:
-
-    > Update the `domain` for MAMP's hostname **WITHOUT** `http` **OR** `/` on `wp_blogs` table:
+    - Update the `domain` for MAMP's hostname **WITHOUT** `http` **OR** `/` on `wp_blogs` table:
 
     ```sql
     UPDATE wp_blogs SET domain = "YOUR_DOMAIN_HERE_WITHOUT_HTTP_OR_SLASH_AT_THE_END";
@@ -100,7 +97,7 @@
     UPDATE wp_blogs SET domain = "omiweb.dev";
     ```
 
-    > Update the `domain` for MAMP's hostname **WITHOUT** `http` **OR** `/` at the end on `wp_site` table:
+    - Update the `domain` for MAMP's hostname **WITHOUT** `http` **OR** `/` at the end on `wp_site` table:
 
     ```sql
     UPDATE wp_site SET domain = "YOUR_DOMAIN_HERE_WITHOUT_HTTP_OR_SLASH_AT_THE_END";
@@ -111,7 +108,7 @@
     UPDATE wp_site SET domain = "omiweb.dev";
     ```
 
-    > Update the `meta_value` for MAMP's hostname **WITH** `http` **AND** `/` at the end on `wp_sitemeta` table:
+    - Update the `meta_value` for MAMP's hostname **WITH** `http` **AND** `/` at the end on `wp_sitemeta` table:
 
     ```sql
     UPDATE wp_sitemeta SET meta_value = "YOUR_DOMAIN_HERE_WITH_HTTP_AND_SLASH_AT_THE_END" WHERE meta_id = 14;
@@ -122,7 +119,7 @@
     UPDATE wp_sitemeta SET meta_value = "http://omiweb.dev/" WHERE meta_id = 14;
     ```
 
-    # Update the `option_value` for MAMP's hostname **WITH** http and **WITHOUT** `/` at the end on `wp_options` table:
+    - Update the `option_value` for MAMP's hostname **WITH** http and **WITHOUT** `/` at the end on `wp_options` table:
 
     ```sql
     UPDATE wp_options SET option_value = "YOUR_DOMAIN_HERE_WITH_HTTP_AND_WITHOUT_SLASH_AT_THE_END" WHERE option_id = 1;
