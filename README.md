@@ -11,7 +11,7 @@
 ## Recommended Tools
 
 - [MAMP](https://www.mamp.info/en/) (Mac OS, Apache Server, MySQL, PHP)
-- PhpMyAdmin(included on MAMP) or Workbench
+- PhpMyAdmin (included on MAMP) or [MySQL Workbench](https://www.mysql.com/products/workbench/)
 - [Sublime Text](https://www.sublimetext.com/) or [Atom](https://atom.io/) or [PHP Storm](https://www.jetbrains.com/phpstorm/) among other ones. It's your choice :)
 - To use git you will need the Terminal or [GitHub Desktop](https://desktop.github.com/) or you can use the IDE.
 
